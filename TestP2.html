@@ -54,7 +54,7 @@
   <div class="flex flex-col min-h-screen">
 
     <!-- HEADER -->
-<header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+<header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 transition-all duration-300">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
     <!-- LOGO -->
     <div class="flex items-center gap-3 text-gray-900 dark:text-white">
@@ -80,19 +80,23 @@
     </a>
 
     <!-- BOUTON HAMBURGER (MOBILE) -->
-    <button id="menu-btn" class="md:hidden text-gray-900 dark:text-white text-3xl focus:outline-none">
+    <button id="menu-btn" class="md:hidden text-gray-900 dark:text-white text-3xl focus:outline-none transition-transform duration-300">
       ☰
     </button>
   </div>
 
   <!-- MENU MOBILE -->
-  <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center justify-center space-y-4 py-4 bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800">
-    <a href="#" class="block w-full text-center py-2 text-base font-medium hover:text-primary">Accueil</a>
-    <a href="#products" class="block w-full text-center py-2 text-base font-medium hover:text-primary">Nos produits</a>
-    <button onclick="openContactModal()" class="block w-full text-center py-2 text-base font-medium hover:text-primary">Contact</button>
-    <a href="tel:+33123456789" class="block w-full text-center py-2 text-base font-bold text-primary">📞 01 23 45 67 89</a>
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden flex flex-col items-center justify-center space-y-4 py-4 bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 transition-all duration-300"
+  >
+    <a href="#" class="block w-full text-center py-2 text-base font-medium hover:text-primary menu-link">Accueil</a>
+    <a href="#products" class="block w-full text-center py-2 text-base font-medium hover:text-primary menu-link">Nos produits</a>
+    <button onclick="openContactModal()" class="block w-full text-center py-2 text-base font-medium hover:text-primary menu-link">Contact</button>
+    <a href="tel:+33123456789" class="block w-full text-center py-2 text-base font-bold text-primary menu-link">📞 01 23 45 67 89</a>
   </div>
 </header>
+
 
 
 
@@ -267,11 +271,23 @@
 <script>
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
+  const menuLinks = document.querySelectorAll('.menu-link');
 
+  // Toggle du menu
   menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
+    menuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
+  });
+
+  // Fermer le menu quand on clique sur un lien
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuBtn.textContent = '☰';
+    });
   });
 </script>
+
 
 </body>
 </html>
