@@ -52,33 +52,49 @@
   <div class="flex flex-col min-h-screen">
 
     <!-- HEADER -->
-    <header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-        <div class="flex items-center gap-3 text-gray-900 dark:text-white">
-          <div class="w-6 h-6 text-primary">
-            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
-            </svg>
-          </div>
-          <h1 class="text-xl font-bold">ParaKrouna</h1>
-        </div>
-
-        <nav class="hidden md:flex items-center gap-8">
-          <a href="TestP2.html" class="text-sm font-medium hover:text-primary">Accueil</a>
-          <a href="#products" class="text-sm font-medium hover:text-primary">Nos produits</a>
-<button 
-        onclick="openContactModal()" 
-        class="text-sm font-medium hover:text-primary"
-      >
-        Contact
-      </button>        </nav>
-
-        <a href="tel:+33123456789" class="flex items-center gap-2 h-10 px-4 rounded-lg bg-primary/20 text-primary font-bold text-sm">
-          <span class="material-symbols-outlined text-base">call</span>
-          <span class="hidden lg:inline">01 23 45 67 89</span>
-        </a>
+<header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 transition-all duration-300">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+    <!-- LOGO -->
+    <div class="flex items-center gap-3 text-gray-900 dark:text-white">
+      <div class="w-6 h-6 text-primary">
+        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+        </svg>
       </div>
-    </header>
+      <h1 class="text-xl font-bold">ParaKrouna</h1>
+    </div>
+
+    <!-- MENU NAV (DESKTOP) -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#" class="text-sm font-medium hover:text-primary">Accueil</a>
+      <a href="#products" class="text-sm font-medium hover:text-primary">Nos produits</a>
+      <button onclick="openContactModal()" class="text-sm font-medium hover:text-primary">Contact</button>
+    </nav>
+
+    <!-- BOUTON TÉLÉPHONE (desktop/tablette) -->
+    <a href="tel:+33123456789" class="hidden sm:flex items-center gap-2 h-10 px-4 rounded-lg bg-primary/20 text-primary font-bold text-sm">
+      <span class="material-symbols-outlined text-base">call</span>
+      <span class="hidden lg:inline">01 23 45 67 89</span>
+    </a>
+
+    <!-- BOUTON HAMBURGER (MOBILE) -->
+    <button id="menu-btn" class="md:hidden text-gray-900 dark:text-white text-3xl focus:outline-none transition-transform duration-300">
+      ☰
+    </button>
+  </div>
+
+  <!-- MENU MOBILE -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden flex flex-col items-center justify-center space-y-4 py-4 bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 transition-all duration-300"
+  >
+    <a href="#" class="block w-full text-center py-2 text-base font-medium hover:text-primary menu-link">Accueil</a>
+    <a href="#products" class="block w-full text-center py-2 text-base font-medium hover:text-primary menu-link">Nos produits</a>
+    <button onclick="openContactModal()" class="block w-full text-center py-2 text-base font-medium hover:text-primary menu-link">Contact</button>
+    <a href="tel:+33123456789" class="block w-full text-center py-2 text-base font-bold text-primary menu-link">📞 01 23 45 67 89</a>
+  </div>
+</header>
+
 
     <!-- MAIN -->
     <main class="flex-1">
@@ -273,6 +289,26 @@
 
     </div>
   </div>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuLinks = document.querySelectorAll('.menu-link');
+
+  // Toggle du menu
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
+  });
+
+  // Fermer le menu quand on clique sur un lien
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuBtn.textContent = '☰';
+    });
+  });
+</script>
+
 
 </body>
 </html>
