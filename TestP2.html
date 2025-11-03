@@ -73,7 +73,7 @@
       <button onclick="openContactModal()" class="text-sm font-medium hover:text-primary">Contact</button>
     </nav>
 
-    <!-- BOUTON TÉLÉPHONE -->
+    <!-- BOUTON TÉLÉPHONE (desktop/tablette) -->
     <a href="tel:+33123456789" class="hidden sm:flex items-center gap-2 h-10 px-4 rounded-lg bg-primary/20 text-primary font-bold text-sm">
       <span class="material-symbols-outlined text-base">call</span>
       <span class="hidden lg:inline">01 23 45 67 89</span>
@@ -86,13 +86,14 @@
   </div>
 
   <!-- MENU MOBILE -->
-  <div id="mobile-menu" class="hidden md:hidden flex-col items-center bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800">
-    <a href="#" class="py-2 text-sm font-medium hover:text-primary">Accueil</a>
-    <a href="#products" class="py-2 text-sm font-medium hover:text-primary">Nos produits</a>
-    <button onclick="openContactModal()" class="py-2 text-sm font-medium hover:text-primary w-full text-center">Contact</button>
-    <a href="tel:+33123456789" class="py-2 text-sm font-bold text-primary">📞 01 23 45 67 89</a>
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center justify-center space-y-4 py-4 bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800">
+    <a href="#" class="block w-full text-center py-2 text-base font-medium hover:text-primary">Accueil</a>
+    <a href="#products" class="block w-full text-center py-2 text-base font-medium hover:text-primary">Nos produits</a>
+    <button onclick="openContactModal()" class="block w-full text-center py-2 text-base font-medium hover:text-primary">Contact</button>
+    <a href="tel:+33123456789" class="block w-full text-center py-2 text-base font-bold text-primary">📞 01 23 45 67 89</a>
   </div>
 </header>
+
 
 
     <!-- MAIN -->
