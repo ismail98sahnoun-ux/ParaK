@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lit Médical Électrique Confort+ - ParaKrouna : Confort, sécurité et autonomie à domicile. Vente et location de lits médicaux électriques." />
+  <title>Lit Médical Électrique Confort+ | ParaKrouna</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#19e65e",
+            "background-light": "#f6f8f6",
+            "background-dark": "#112116",
+            "card-light": "#ffffff",
+            "card-dark": "#1b2b1f",
+            "border-light": "#e5e7eb",
+            "border-dark": "#2d3d30",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
+  <div class="flex flex-col min-h-screen">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+        <div class="flex items-center gap-3 text-gray-900 dark:text-white">
+          <div class="w-6 h-6 text-primary">
+            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+            </svg>
+          </div>
+          <h1 class="text-xl font-bold">ParaKrouna</h1>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="TestP2.html" class="text-sm font-medium hover:text-primary">Accueil</a>
+          <a href="#products" class="text-sm font-medium hover:text-primary">Nos produits</a>
+<button 
+        onclick="openContactModal()" 
+        class="text-sm font-medium hover:text-primary"
+      >
+        Contact
+      </button>        </nav>
+
+        <a href="tel:+33123456789" class="flex items-center gap-2 h-10 px-4 rounded-lg bg-primary/20 text-primary font-bold text-sm">
+          <span class="material-symbols-outlined text-base">call</span>
+          <span class="hidden lg:inline">01 23 45 67 89</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="flex-1">
+      <!-- SECTION PRODUIT -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col lg:flex-row gap-12 items-center">
+        <!-- Galerie d’images -->
+        <div class="flex-1">
+          <div class="w-full rounded-xl overflow-hidden shadow-md">
+            <img id="mainImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJvWsk2OL8yCDf0tAGAZiu53zK3zBCiSaEOrlcHbts-Iy4P9e9b6TMiozbXxZynI68CImUD1p7-JCM0zU7sr9U3dwFTSRMKwesSX-6VGmSapwlCvEnG3Uxn65kSPaWNNpW2aRvRt8toEVzGAaayue4KpKByQdAwzOwB1Xswi59wQ7Mwspfkap0KmsxiAAJvdIcZ76I4dTGFaSLMUod465FVrc8MtHQcJwuOWZh7ME0nkLJBdOMT1-9xxRM3FyY9-m9idfUcO3YBw"
+              alt="Lit Médical Électrique Confort+" class="w-full object-cover aspect-video transition-all duration-300">
+          </div>
+          <div class="flex gap-4 mt-4">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJvWsk2OL8yCDf0tAGAZiu53zK3zBCiSaEOrlcHbts-Iy4P9e9b6TMiozbXxZynI68CImUD1p7-JCM0zU7sr9U3dwFTSRMKwesSX-6VGmSapwlCvEnG3Uxn65kSPaWNNpW2aRvRt8toEVzGAaayue4KpKByQdAwzOwB1Xswi59wQ7Mwspfkap0KmsxiAAJvdIcZ76I4dTGFaSLMUod465FVrc8MtHQcJwuOWZh7ME0nkLJBdOMT1-9xxRM3FyY9-m9idfUcO3YBw"
+              alt="Lit vue 1" class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition" onclick="changeImage(this)">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd-xYiZkj30CTukbm4FR7jVdH-DaTsd5Z0nYBnTmJWlGFPSVUW-BC6qfhlXyw2YUEVaQxaDdx1QCGmhO917jT7A_p7d64uY0ulRRbtGdiXUF7woxv-8w9A-IQJ8ocGN4yGNNRo3ZgHyesvT6ofbBhIyIA5fK4190YVo1b4Mk6-5bkgfwWTuOI2XdAt99ymM8FQOs_ht8kIevxOuAH6gV964hlNrmrria_f_54hvZkKhJqfb4NmLzYEABnzXovhePP9adVa3R_lmg"
+              alt="Lit vue 2" class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition" onclick="changeImage(this)">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-JvmRTkpnKU_0a0jW9JxzruASMBtB36MPmWTSH9G2tQ09NJknWYUpc_k9FXJU0g_alkNdDFVRIswN7qTmz5zfvlI_cIpWzLYG7fqcqZvSwUjko7bJlOh9hyNlZBOpfXpfYjm9tun_vYZu8Rlp1bYWPwcUxGTd5TgNDd8X-Nw48ILJQHXLuT_ojiruwVNsygO49s3G62OqLjCVXk1OO-qt3DkztVmurNXNTpd-77BxAqPlMG19OydPgpyz-rdY9t_DvHp-pPntZQ"
+              alt="Lit vue 3" class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition" onclick="changeImage(this)">
+          </div>
+        </div>
+
+        <!-- Détails du produit -->
+        <div class="flex-1">
+          <h2 class="text-4xl font-black mb-4">Lit Médical Électrique Confort+</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+            Le <strong>Lit Médical Électrique Confort+</strong> offre un confort optimal pour les patients et les aidants. Entièrement ajustable, il permet un positionnement précis pour le repos, les soins ou la mobilité. Idéal pour un usage à domicile ou en établissement médicalisé.
+          </p>
+          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mb-8 space-y-2">
+            <li>Hauteur réglable électriquement (40 à 80 cm)</li>
+            <li>Dossier et jambes ajustables par télécommande</li>
+            <li>Barrières latérales sécurisées</li>
+            <li>Roues avec frein individuel</li>
+            <li>Poids maximum utilisateur : 180 kg</li>
+          </ul>
+          <div class="flex items-center gap-4">
+            <button onclick="openContactModal()" class="bg-primary text-gray-900 font-bold px-6 py-3 rounded-lg hover:opacity-90 transition">
+              Acheter / Louer
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- POPUP CONTACT -->
+      <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-background-light dark:bg-background-dark rounded-xl p-8 max-w-md w-full shadow-lg relative">
+          <button onclick="closeContactModal()" class="absolute top-3 right-3 text-gray-500 hover:text-gray-900 dark:hover:text-gray-200 font-bold text-lg">×</button>
+          <h2 class="text-2xl font-bold mb-4">Contactez-nous</h2>
+          <p class="mb-4">Contactez-nous pour obtenir votre <strong>devis personnalisé</strong>.</p>
+          <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+            <li>📍 123 Rue de la Santé, Paris</li>
+            <li>✉️ <a href="mailto:contact@parakrouna.fr" class="hover:text-primary">contact@parakrouna.fr</a></li>
+            <li>📞 <a href="tel:+33123456789" class="hover:text-primary">01 23 45 67 89</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SECTION PRODUITS COMPLÉMENTAIRES -->
+      <section id="products" class="mt-16 py-12">
+        <h2 class="text-3xl font-bold text-center mb-8">Produits complémentaires</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center">
+            <a href="test4.html" class="block">
+              <div class="h-56 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqZ1ZZNu0z54K2ipRuA9UQnMxEgcerqbnWp-7HgQhYQYaCy5gGxA-cjR27BAnh6tKyOIY-ZDvf8sq5ueJJU82MslTyvH4MHNzVii8R567h51evLHRYYiSHYomND5gRCFVWkxfLS0V1E0K-I1GNq1QP6DSEW9TmBbcSPhyVpOX7-Gz-nejC476pDI97siHcenkYWinJGjPGSRNMADtN9xqnR5wf8fYX9mhqN8U2eTQVqpsH-okAuJzupnkEeWwt1oFetBGJ9lZP9g');"></div>
+              <div class="p-6">
+                <h3 class="font-bold text-xl">Fauteuil Roulant</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center">
+            <a href="test5.html" class="block">
+              <div class="h-56 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDMMjcO6GFX49JTrAiHBRRjKEuu0HLNDF22DfmTkcGn8MA_Lv9Y0hu2Vv-pi9na0Cq6Al7EZz9xUyzadzuyQNIY7cLApVdSPRPstJJf8dwHe7jPdBxF2q8t1poFZocgMMxeFMLvI49zrJa4um4RB02aOvppU0jPdyzaCV9ZMpBpSJIoZDxCtZU6lLsKVyPvFn2MEG-dGYQBtBYdsssi7uQIpLwGyChdyWsmxdpJJJnMsS5uxYWgf_n4pygbni6sKKyRDYCzafLDA');"></div>
+              <div class="p-6">
+                <h3 class="font-bold text-xl">Matelas à Air Médical</h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center">
+            <a href="test6.html" class="block">
+              <div class="h-56 bg-cover bg-center" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIc0GvrsWjN7jM6UhjEByfTzJdwY7GbOl7CnPhdklTczuwdXStisDIzPe3QXoQ3C5J6c8KV-IddN5Bguw-VILQfrudfZEh1zBHUZa1sAcN6mRqqS1hkWbE65I9YGlRWCzNjVpcjzN4-zvMwMFh_AQ50k0rQKaIN_8-OMKLI0pHSoULKvJ13AxnqaYwF8I9fFCPQ7Gwa2UNRlZZftUxcDI3YwuXFxGRcPdff5v90RhaXZoOiSVdm_jXxAZNFA4GVlc8YQg-PQz9nw');"></div>
+              <div class="p-6">
+                <h3 class="font-bold text-xl">Chaise Toilette</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+<!DOCTYPE html>
+<html lang="fr" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vos avantages exclusifs - Para Krouna</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- Tailwind Config -->
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#19e65e",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html, body {
+      background: transparent !important;
+      font-family: 'Inter', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+
+<body class="font-display bg-transparent">
+
+  <div class="flex flex-col gap-10 px-4 py-16 bg-transparent">
+    <div class="flex flex-col items-center text-center gap-4 bg-transparent">
+      <h1 class="text-3xl font-bold text-center mb-8">
+
+        Vos avantages exclusifs
+      </h1>
+      <p class="text-gray-600 text-base leading-normal max-w-[720px]">
+        Profitez d'une expérience d'achat simple, sécurisée et pleine de bénéfices.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-4 p-0 bg-transparent">
+      
+      <!-- Avantage 1 -->
+      <div class="flex flex-1 gap-4 rounded-xl border border-primary/30 bg-transparent p-6 flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300">
+        <div class="text-primary text-4xl">
+          <span class="material-symbols-outlined">local_shipping</span>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h2 class="text-gray-800 text-base font-bold leading-tight">Livraison Gratuite</h2>
+          <p class="text-gray-500 text-sm leading-normal">Dès 49€ d'achat</p>
+        </div>
+      </div>
+
+      <!-- Avantage 2 -->
+      <div class="flex flex-1 gap-4 rounded-xl border border-primary/30 bg-transparent p-6 flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300">
+        <div class="text-primary text-4xl">
+          <span class="material-symbols-outlined">lock</span>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h2 class="text-gray-800 text-base font-bold leading-tight">Paiement à la livraison</h2>
+          <p class="text-gray-500 text-sm leading-normal">Simple et sécurisé</p>
+        </div>
+      </div>
+
+      <!-- Avantage 3 -->
+      <div class="flex flex-1 gap-4 rounded-xl border border-primary/30 bg-transparent p-6 flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300">
+        <div class="text-primary text-4xl">
+          <span class="material-symbols-outlined">support_agent</span>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h2 class="text-gray-800 text-base font-bold leading-tight">Conseil d'Expert</h2>
+          <p class="text-gray-500 text-sm leading-normal">Nos conseillers vous répondent</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
+    <!-- FOOTER -->
+    <footer class="bg-card-light dark:bg-card-dark border-t border-border-light dark:border-border-dark py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <h3 class="text-xl font-bold mb-2">ParaKrouna</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">
+            Votre partenaire de confiance pour l’équipement médical à domicile.
+          </p>
+        </div>
+<div>
+  <h4 class="text-sm font-semibold uppercase mb-4">Navigation</h4>
+  <ul class="space-y-2 text-sm">
+    <li><a href="#products" class="hover:text-primary">Nos Produits</a></li>
+    <li>
+      <button 
+        onclick="openContactModal()" 
+        class="over:text-primary:opacity-90 transition w-full text-left"
+      >
+        Contact
+      </button>
+    </li>
+  </ul>
+</div>
+
+          <h4 class="text-sm font-semibold uppercase mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li>📍 123 Rue de la Santé, Paris</li>
+            <li>✉️ <a href="mailto:contact@parakrouna.fr" class="hover:text-primary">contact@parakrouna.fr</a></li>
+            <li>📞 <a href="tel:+33123456789" class="hover:text-primary">01 23 45 67 89</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-8">
+        © 2025 ParaKrouna. Tous droits réservés.
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- SCRIPT GALERIE ET MODALE -->
+  <script>
+    function changeImage(element) {
+      const mainImage = document.getElementById("mainImage");
+      mainImage.src = element.src;
+      document.querySelectorAll('.thumbnail').forEach(img => img.classList.remove('border-primary'));
+      element.classList.add('border-primary');
+    }
+
+    function openContactModal() {
+      document.getElementById('contactModal').classList.remove('hidden');
+      document.getElementById('contactModal').classList.add('flex');
+    }
+
+    function closeContactModal() {
+      document.getElementById('contactModal').classList.add('hidden');
+      document.getElementById('contactModal').classList.remove('flex');
+    }
+  </script>
+
+</body>
+</html>
