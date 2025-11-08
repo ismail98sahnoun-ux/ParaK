@@ -96,27 +96,45 @@
 </header>
 
 
-    <!-- MAIN -->
-    <main class="flex-1">
-      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col lg:flex-row gap-12 items-center">
+   <main class="flex-1">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col lg:flex-row gap-12 items-center">
 
-        <!-- Galerie d’images -->
-        <div class="flex-1">
-          <div class="w-full rounded-xl overflow-hidden shadow-md">
-            <img id="mainImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGwo1VJaQZfpua6UJ30SNPvS5AbfrJZOOPI8_MPp97HBJICDRUv0UC1gagXT2ZhcBlSrvqvjEn3_ImOXmqmER-BwLAfJGY9FQGJuYoYGdI5716SDSlt7TwljHUmwmejt4JAUQD906k8H5lRVL-KPJPgSRnSc2vb5EToMyJ2MEvOXknnHU2jsjtWZ3UmgtzKXZE5EYGftsISlE64Luf2gRkahqoN9sQlY54s3i9P1qcWySzybN_hdreTF_T44nSCDnitkkVysmlFQ"
-              alt="Fauteuil Roulant" class="w-full object-cover aspect-video transition-all duration-300">
-          </div>
+    <!-- Galerie d’images -->
+    <div class="flex-1">
 
-          <div class="flex gap-4 mt-4">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGwo1VJaQZfpua6UJ30SNPvS5AbfrJZOOPI8_MPp97HBJICDRUv0UC1gagXT2ZhcBlSrvqvjEn3_ImOXmqmER-BwLAfJGY9FQGJuYoYGdI5716SDSlt7TwljHUmwmejt4JAUQD906k8H5lRVL-KPJPgSRnSc2vb5EToMyJ2MEvOXknnHU2jsjtWZ3UmgtzKXZE5EYGftsISlE64Luf2gRkahqoN9sQlY54s3i9P1qcWySzybN_hdreTF_T44nSCDnitkkVysmlFQ"
-              alt="Fauteuil vue 1" class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition" onclick="changeImage(this)">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqZ1ZZNu0z54K2ipRuA9UQnMxEgcerqbnWp-7HgQhYQYaCy5gGxA-cjR27BAnh6tKyOIY-ZDvf8sq5ueJJU82MslTyvH4MHNzVii8R567h51evLHRYYiSHYomND5gRCFVWkxfLS0V1E0K-I1GNq1QP6DSEW9TmBbcSPhyVpOX7-Gz-nejC476pDI97siHcenkYWinJGjPGSRNMADtN9xqnR5wf8fYX9mhqN8U2eTQVqpsH-okAuJzupnkEeWwt1oFetBGJ9lZP9g"
-              alt="Fauteuil vue 2" class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition" onclick="changeImage(this)">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-JvmRTkpnKU_0a0jW9JxzruASMBtB36MPmWTSH9G2tQ09NJknWYUpc_k9FXJU0g_alkNdDFVRIswN7qTmz5zfvlI_cIpWzLYG7fqcqZvSwUjko7bJlOh9hyNlZBOpfXpfYjm9tun_vYZu8Rlp1bYWPwcUxGTd5TgNDd8X-Nw48ILJQHXLuT_ojiruwVNsygO49s3G62OqLjCVXk1OO-qt3DkztVmurNXNTpd-77BxAqPlMG19OydPgpyz-rdY9t_DvHp-pPntZQ"
-              alt="Fauteuil vue 3" class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition" onclick="changeImage(this)">
-          </div>
-        </div>
+      <!-- Image principale -->
+      <div class="w-full rounded-xl overflow-hidden shadow-md">
+        <img
+          id="mainImage"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGwo1VJaQZfpua6UJ30SNPvS5AbfrJZOOPI8_MPp97HBJICDRUv0UC1gagXT2ZhcBlSrvqvjEn3_ImOXmqmER-BwLAfJGY9FQGJuYoYGdI5716SDSlt7TwljHUmwmejt4JAUQD906k8H5lRVL-KPJPgSRnSc2vb5EToMyJ2MEvOXknnHU2jsjtWZ3UmgtzKXZE5EYGftsISlE64Luf2gRkahqoN9sQlY54s3i9P1qcWySzybN_hdreTF_T44nSCDnitkkVysmlFQ"
+          alt="Fauteuil Roulant"
+          class="w-full object-cover aspect-video transition-all duration-300"
+        >
+      </div>
 
+      <!-- Miniatures -->
+      <div class="flex gap-4 mt-4">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGwo1VJaQZfpua6UJ30SNPvS5AbfrJZOOPI8_MPp97HBJICDRUv0UC1gagXT2ZhcBlSrvqvjEn3_ImOXmqmER-BwLAfJGY9FQGJuYoYGdI5716SDSlt7TwljHUmwmejt4JAUQD906k8H5lRVL-KPJPgSRnSc2vb5EToMyJ2MEvOXknnHU2jsjtWZ3UmgtzKXZE5EYGftsISlE64Luf2gRkahqoN9sQlY54s3i9P1qcWySzybN_hdreTF_T44nSCDnitkkVysmlFQ"
+          alt="Fauteuil vue 1"
+          class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition"
+          onclick="changeImage(this)"
+        >
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqZ1ZZNu0z54K2ipRuA9UQnMxEgcerqbnWp-7HgQhYQYaCy5gGxA-cjR27BAnh6tKyOIY-ZDvf8sq5ueJJU82MslTyvH4MHNzVii8R567h51evLHRYYiSHYomND5gRCFVWkxfLS0V1E0K-I1GNq1QP6DSEW9TmBbcSPhyVpOX7-Gz-nejC476pDI97siHcenkYWinJGjPGSRNMADtN9xqnR5wf8fYX9mhqN8U2eTQVqpsH-okAuJzupnkEeWwt1oFetBGJ9lZP9g"
+          alt="Fauteuil vue 2"
+          class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition"
+          onclick="changeImage(this)"
+        >
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-JvmRTkpnKU_0a0jW9JxzruASMBtB36MPmWTSH9G2tQ09NJknWYUpc_k9FXJU0g_alkNdDFVRIswN7qTmz5zfvlI_cIpWzLYG7fqcqZvSwUjko7bJlOh9hyNlZBOpfXpfYjm9tun_vYZu8Rlp1bYWPwcUxGTd5TgNDd8X-Nw48ILJQHXLuT_ojiruwVNsygO49s3G62OqLjCVXk1OO-qt3DkztVmurNXNTpd-77BxAqPlMG19OydPgpyz-rdY9t_DvHp-pPntZQ"
+          alt="Fauteuil vue 3"
+          class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition"
+          onclick="changeImage(this)"
+        >
+      </div>
+
+    </div>
         <!-- Détails du produit -->
         <div class="flex-1">
           <h2 class="text-4xl font-black mb-4">Fauteuil Roulant</h2>
@@ -373,6 +391,7 @@
   </script>
 </body>
 </html>
+
 
 
 
