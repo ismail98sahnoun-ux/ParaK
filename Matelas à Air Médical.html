@@ -100,43 +100,76 @@
 <main class="flex-1">
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col lg:flex-row gap-12 items-center">
     
-    <!-- Galerie d’images -->
-    <div class="flex-1">
-      
-      <!-- Image principale -->
-      <div class="w-full rounded-xl overflow-hidden shadow-md bg-gray-100 flex items-center justify-center">
-        <img
-          id="mainImage"
-          src="https://i.postimg.cc/CLyMngF5/Gemini-Generated-Image-91yhw591yhw591yh-1.png"
-          alt="Matelas à Air Médical"
-          class="w-full h-full object-cover transition-all duration-300"
-        >
-      </div>
+<!-- Galerie d’images -->
+<div class="flex-1">
 
-      <!-- Miniatures -->
-      <div class="flex gap-4 mt-4">
-        <img
-          src="https://i.postimg.cc/CLyMngF5/Gemini-Generated-Image-91yhw591yhw591yh-1.png"
-          alt="Matelas vue 1"
-          class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition object-contain"
-          onclick="changeImage(this)"
-        >
+  <!-- Image principale -->
+  <div class="relative w-full h-80 md:h-[450px] rounded-xl overflow-hidden shadow-md bg-gray-100 flex items-center justify-center">
+    <img
+      id="mainImage"
+      src="https://i.postimg.cc/CLyMngF5/Gemini-Generated-Image-91yhw591yhw591yh-1.png"
+      alt="Matelas à Air Médical"
+      class="max-h-full max-w-full object-contain transition-all duration-300"
+    >
 
-        <img
-          src="https://i.postimg.cc/hGKqbDYH/Gemini-Generated-Image-7mbcw37mbcw37mbc-1.png"
-          alt="Matelas vue 2"
-          class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition object-contain"
-          onclick="changeImage(this)"
-        >
-
-        <img
-          src="https://i.postimg.cc/TwYLSXKk/Gemini-Generated-Image-6ly7036ly7036ly7-1.png"
-          alt="Matelas vue 3"
-          class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition object-contain"
-          onclick="changeImage(this)"
-        >
-      </div>
+    <!-- Texte + bouton sur image -->
+    <div class="absolute bottom-4 left-4">
     </div>
+  </div>
+
+  <!-- Miniatures défilables -->
+  <div class="flex gap-4 mt-4 overflow-x-auto scrollbar-hide">
+    <img
+      src="https://i.postimg.cc/CLyMngF5/Gemini-Generated-Image-91yhw591yhw591yh-1.png"
+      alt="Matelas vue 1"
+      class="thumbnail w-24 h-20 flex-shrink-0 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition object-contain"
+      onclick="changeImage(this)"
+    >
+
+    <img
+      src="https://i.postimg.cc/C1JV53Lm/Gemini-Generated-Image-7mbcw37mbcw37mbc-1-1.png"
+      alt="Matelas vue 2"
+      class="thumbnail w-24 h-20 flex-shrink-0 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition object-contain"
+      onclick="changeImage(this)"
+    >
+
+    <img
+      src="https://i.postimg.cc/QtfqHmL7/Gemini-Generated-Image-6ly7036ly7036ly7-2.png"
+      alt="Matelas vue 3"
+      class="thumbnail w-24 h-20 flex-shrink-0 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition object-contain"
+      onclick="changeImage(this)"
+    >
+  </div>
+</div>
+
+<!-- Script -->
+<script>
+  function changeImage(element) {
+    const mainImage = document.getElementById('mainImage');
+    mainImage.src = element.src;
+
+    // Retire la bordure active des autres miniatures
+    document.querySelectorAll('.thumbnail').forEach(img => {
+      img.classList.remove('border-blue-500');
+    });
+
+    // Ajoute la bordure à la miniature sélectionnée
+    element.classList.add('border-blue-500');
+  }
+</script>
+
+<!-- Styles supplémentaires -->
+<style>
+  /* Cache la scrollbar sur mobile pour un effet "swipe" propre */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
 
 
 
@@ -179,12 +212,13 @@
       </div>
 
       <!-- SECTION PRODUITS COMPLÉMENTAIRES -->
-      <section id="products" class="mt-16 py-12">
+<section id="products" class="mt-16 py-12">
   <h2 class="text-3xl font-bold text-center mb-8">Produits complémentaires</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center">
-      <a href="Fauteuil Roulant.html" class="block">
+    <!-- Carte Fauteuil Roulant -->
+    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <a href="Fauteuil Roulant.html" class="block h-full w-full">
         <div class="h-56 flex items-center justify-center bg-gray-100">
           <img src="https://i.postimg.cc/JzkwWDwh/Gemini-Generated-Image-tbmeletbmeletbme-1-1.png" alt="Fauteuil Roulant" class="h-full w-auto object-contain">
         </div>
@@ -194,8 +228,9 @@
       </a>
     </div>
 
-    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center">
-      <a href="Lit Médical Électrique Confort+.html" class="block">
+    <!-- Carte Lit Médical Électrique -->
+    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <a href="Lit Médical Électrique Confort+.html" class="block h-full w-full">
         <div class="h-56 flex items-center justify-center bg-gray-100">
           <img src="https://i.postimg.cc/VvD7846L/Gemini-Generated-Image-c8qgznc8qgznc8qg-1.png" alt="Lit Médical Électrique" class="h-full w-auto object-contain">
         </div>
@@ -205,8 +240,9 @@
       </a>
     </div>
 
-    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center">
-      <a href="Concentrateur d'Oxygène.html" class="block">
+    <!-- Carte Concentrateur d'Oxygène -->
+    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <a href="Concentrateur d'Oxygène.html" class="block h-full w-full">
         <div class="h-56 flex items-center justify-center bg-gray-100">
           <img src="https://fr.longfian.net/uploads/202112777/longfian-5l-medical-oxygen-concentrator45193270888.jpg" alt="Concentrateur d'Oxygène" class="h-full w-auto object-contain">
         </div>
@@ -218,6 +254,7 @@
 
   </div>
 </section>
+
 
 
     </main>
@@ -372,7 +409,7 @@
           <ul class="space-y-2 text-sm">
             <li>📍 Av. Ibn El Atir, Fès 30050</li>
             <li>✉️ <a href="mailto:contact@parakrouna.ma" class="hover:text-primary">contact@parakrouna.ma</a></li>
-            <li>📞 <a href="tel:+33123456789" class="hover:text-primary">06 65 29 80 82</a></li>
+            <li>📞 <a href="tel:+212665298082" class="hover:text-primary">06 65 29 80 82</a></li>
           </ul>
         </div>
       </div>
@@ -405,18 +442,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
