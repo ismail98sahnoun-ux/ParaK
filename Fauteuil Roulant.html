@@ -72,7 +72,7 @@ f<!DOCTYPE html>
     </nav>
 
     <!-- BOUTON TÉLÉPHONE (desktop/tablette) -->
-    <a href="tel:+33123456789" class="hidden sm:flex items-center gap-2 h-10 px-4 rounded-lg bg-primary/20 text-primary font-bold text-sm">
+    <a href="tel:+212665298082" class="hidden sm:flex items-center gap-2 h-10 px-4 rounded-lg bg-primary/20 text-primary font-bold text-sm">
       <span class="material-symbols-outlined text-base">call</span>
       <span class="hidden lg:inline">06 65 29 80 82</span>
     </a>
@@ -91,74 +91,199 @@ f<!DOCTYPE html>
     <a href="index.html" class="block w-full text-center py-2 text-base font-medium hover:text-primary menu-link">Accueil</a>
     <a href="#products" class="block w-full text-center py-2 text-base font-medium hover:text-primary menu-link">Nos produits</a>
     <button onclick="openContactModal()" class="block w-full text-center py-2 text-base font-medium hover:text-primary menu-link">Contact</button>
-    <a href="tel:+33123456789" class="block w-full text-center py-2 text-base font-bold text-primary menu-link">📞 06 65 29 80 82</a>
+    <a href="tel:+212665298082" class="block w-full text-center py-2 text-base font-bold text-primary menu-link">📞 06 65 29 80 82</a>
   </div>
 </header>
 
 
    <main class="flex-1">
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col lg:flex-row gap-12 items-center">
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col lg:flex-row gap-12 items-center">
 
-    <!-- Galerie d’images -->
-    <div class="flex-1">
+  <!-- Galerie d’images -->
+  <div class="flex-1">
 
-      <!-- Image principale -->
-      <div class="w-full rounded-xl overflow-hidden shadow-md bg-gray-100 flex items-center justify-center">
-        <img
-          id="mainImage"
-          src="https://i.postimg.cc/JzkwWDwh/Gemini-Generated-Image-tbmeletbmeletbme-1-1.png"
-          alt="Fauteuil Roulant"
-          class="w-full h-auto object-contain transition-all duration-300"
-        >
-      </div>
-
-      <!-- Miniatures -->
-      <div class="flex gap-4 mt-4 justify-center">
-        <img
-          src="https://i.postimg.cc/XqJh1XKt/Gemini-Generated-Image-iv59kiiv59kiiv59-1.png"
-          alt="Fauteuil vue 1"
-          class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition object-contain bg-gray-100 p-1"
-          onclick="changeImage(this)"
-        >
-        <img
-          src="https://i.postimg.cc/NfZVbsyg/Gemini-Generated-Image-geq505geq505geq5-1.png"
-          alt="Fauteuil vue 2"
-          class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition object-contain bg-gray-100 p-1"
-          onclick="changeImage(this)"
-        >
-        <img
-          src="https://i.postimg.cc/JzkwWDwh/Gemini-Generated-Image-tbmeletbmeletbme-1-1.png"
-          alt="Fauteuil vue 3"
-          class="thumbnail w-24 h-20 rounded-lg cursor-pointer border-2 border-transparent hover:border-primary transition object-contain bg-gray-100 p-1"
-          onclick="changeImage(this)"
-        >
-      </div>
-
+    <!-- Image principale -->
+    <div class="relative w-full h-80 md:h-[450px] rounded-xl overflow-hidden shadow-md bg-gray-100 flex items-center justify-center">
+      <img
+        id="mainImage"
+        src="https://i.postimg.cc/JzkwWDwh/Gemini-Generated-Image-tbmeletbmeletbme-1-1.png"
+        alt="Fauteuil Roulant"
+        class="max-h-full max-w-full object-contain transition-all duration-300"
+      >
     </div>
 
-        <!-- Détails du produit -->
-        <div class="flex-1">
-          <h2 class="text-4xl font-black mb-4">Fauteuil Roulant</h2>
-          <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-            Ce <strong>Fauteuil Roulant moderne</strong> est conçu pour offrir confort, sécurité et mobilité. Léger et robuste, il convient à un usage quotidien à domicile ou à l’extérieur.
-          </p>
+    <!-- Miniatures défilables -->
+    <div class="flex gap-4 mt-4 overflow-x-auto scrollbar-hide">
+      <img
+        src="https://i.postimg.cc/XqJh1XKt/Gemini-Generated-Image-iv59kiiv59kiiv59-1.png"
+        alt="Fauteuil vue 1"
+        class="thumbnail w-24 h-20 flex-shrink-0 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition object-contain"
+        onclick="changeImage(this)"
+      >
+      <img
+        src="https://i.postimg.cc/NfZVbsyg/Gemini-Generated-Image-geq505geq505geq5-1.png"
+        alt="Fauteuil vue 2"
+        class="thumbnail w-24 h-20 flex-shrink-0 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition object-contain"
+        onclick="changeImage(this)"
+      >
+      <img
+        src="https://i.postimg.cc/JzkwWDwh/Gemini-Generated-Image-tbmeletbmeletbme-1-1.png"
+        alt="Fauteuil vue 3"
+        class="thumbnail w-24 h-20 flex-shrink-0 rounded-lg c   ursor-pointer border-2 border-transparent hover:border-blue-500 transition object-contain"
+        onclick="changeImage(this)"
+      >
+    </div>
 
-          <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mb-8 space-y-2">
-            <li>Structure en aluminium légère</li>
-            <li>Dossier et repose-pieds rabattables</li>
-            <li>Roues arrières démontables pour transport facile</li>
-            <li>Freins individuels pour plus de sécurité</li>
-            <li>Poids maximum utilisateur : 120 kg</li>
-          </ul>
+  </div>
 
-          <div class="flex items-center gap-4">
-            <button onclick="openContactModal()" class="bg-primary text-gray-900 font-bold px-6 py-3 rounded-lg hover:opacity-90 transition">
-              Acheter / Louer
-            </button>
-          </div>
-        </div>
+  <!-- Détails du produit -->
+  <div class="flex-1">
+    <h2 class="text-4xl font-black mb-4">Fauteuil Roulant</h2>
+    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+      Ce <strong>Fauteuil Roulant moderne</strong> est conçu pour offrir confort, sécurité et mobilité. Léger et robuste, il convient à un usage quotidien à domicile ou à l’extérieur.
+    </p>
+    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mb-8 space-y-2">
+      <li>Structure en aluminium légère</li>
+      <li>Dossier et repose-pieds rabattables</li>
+      <li>Roues arrières démontables pour transport facile</li>
+      <li>Freins individuels pour plus de sécurité</li>
+      <li>Poids maximum utilisateur : 120 kg</li>
+    </ul>
+    <div class="flex items-center gap-4">
+      <button onclick="openContactModal()" class="bg-primary text-gray-900 font-bold px-6 py-3 rounded-lg hover:opacity-90 transition">
+        Acheter / Louer
+      </button>
+    </div>
+  </div>
+</section>
 
-      </section>
+<!-- Script pour changer l'image principale et swipe tactile -->
+<script>
+  const mainImage = document.getElementById('mainImage');
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  let startX = 0;
+  let currentIndex = 0;
+
+  // Initialise l'index de l'image active
+  thumbnails.forEach((thumb, index) => {
+    if (thumb.classList.contains('border-blue-500')) currentIndex = index;
+  });
+
+  function changeImage(element) {
+    mainImage.src = element.src;
+
+    // Retire la bordure active des autres miniatures
+    thumbnails.forEach(img => img.classList.remove('border-blue-500'));
+
+    // Ajoute la bordure à la miniature sélectionnée
+    element.classList.add('border-blue-500');
+
+    // Met à jour l'index actuel
+    currentIndex = Array.from(thumbnails).indexOf(element);
+  }
+
+  // Swipe tactile
+  mainImage.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  mainImage.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+
+    if (endX - startX > 50) {
+      // Swipe droit → image précédente
+      currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+    } else if (startX - endX > 50) {
+      // Swipe gauche → image suivante
+      currentIndex = (currentIndex + 1) % thumbnails.length;
+    } else {
+      return; // swipe trop court → ignorer
+    }
+
+    // Met à jour l'image principale
+    mainImage.src = thumbnails[currentIndex].src;
+
+    // Met à jour la bordure active
+    thumbnails.forEach(img => img.classList.remove('border-blue-500'));
+    thumbnails[currentIndex].classList.add('border-blue-500');
+  });
+</script>
+
+<!-- Styles pour cacher la scrollbar sur mobile -->
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
+
+<!-- Script pour changer l'image principale et swipe tactile -->
+<script>
+  const mainImage = document.getElementById('mainImage');
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  let startX = 0;
+  let currentIndex = 0;
+
+  // Initialise l'index de l'image active
+  thumbnails.forEach((thumb, index) => {
+    if (thumb.classList.contains('border-blue-500')) currentIndex = index;
+  });
+
+  function changeImage(element) {
+    mainImage.src = element.src;
+
+    // Retire la bordure active des autres miniatures
+    thumbnails.forEach(img => img.classList.remove('border-blue-500'));
+
+    // Ajoute la bordure à la miniature sélectionnée
+    element.classList.add('border-blue-500');
+
+    // Met à jour l'index actuel
+    currentIndex = Array.from(thumbnails).indexOf(element);
+  }
+
+  // Swipe tactile
+  mainImage.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  mainImage.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+
+    if (endX - startX > 50) {
+      // Swipe droit → image précédente
+      currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+    } else if (startX - endX > 50) {
+      // Swipe gauche → image suivante
+      currentIndex = (currentIndex + 1) % thumbnails.length;
+    } else {
+      return; // swipe trop court → ignorer
+    }
+
+    // Met à jour l'image principale
+    mainImage.src = thumbnails[currentIndex].src;
+
+    // Met à jour la bordure active
+    thumbnails.forEach(img => img.classList.remove('border-blue-500'));
+    thumbnails[currentIndex].classList.add('border-blue-500');
+  });
+</script>
+
+<!-- Styles pour cacher la scrollbar sur mobile -->
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
 
       <!-- POPUP CONTACT -->
       <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
@@ -169,7 +294,7 @@ f<!DOCTYPE html>
           <ul class="space-y-2 text-gray-700 dark:text-gray-300">
             <li>📍 Av. Ibn El Atir, Fès 30050</li>
             <li>✉️ <a href="mailto:contact@parakrouna.ma" class="hover:text-primary">contact@parakrouna.ma</a></li>
-            <li>📞 <a href="tel:+33123456789" class="hover:text-primary">06 65 29 80 82</a></li>
+            <li>📞 <a href="tel:+212665298082" class="hover:text-primary">06 65 29 80 82</a></li>
           </ul>
         </div>
       </div>
@@ -179,20 +304,22 @@ f<!DOCTYPE html>
 <section id="products" class="mt-16 py-12">
   <h2 class="text-3xl font-bold text-center mb-8">Produits complémentaires</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    
-    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center">
-      <a href="Lit Médical Électrique Confort+.html" class="block">
+
+    <!-- Carte Fauteuil Roulant -->
+    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <a href="Fauteuil Roulant.html" class="block h-full w-full">
         <div class="h-56 flex items-center justify-center bg-gray-100">
-          <img src="https://i.postimg.cc/VvD7846L/Gemini-Generated-Image-c8qgznc8qgznc8qg-1.png" alt="Lit Médical Électrique" class="h-full w-auto object-contain">
+          <img src="https://i.postimg.cc/JzkwWDwh/Gemini-Generated-Image-tbmeletbmeletbme-1-1.png" alt="Fauteuil Roulant" class="h-full w-auto object-contain">
         </div>
         <div class="p-6">
-          <h3 class="font-bold text-xl">Lit Médical Électrique</h3>
+          <h3 class="font-bold text-xl">Fauteuil Roulant</h3>
         </div>
       </a>
     </div>
 
-    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center">
-      <a href="Matelas à Air Médical.html" class="block">
+    <!-- Carte Matelas à Air Médical -->
+    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <a href="Matelas à Air Médical.html" class="block h-full w-full">
         <div class="h-56 flex items-center justify-center bg-gray-100">
           <img src="https://i.postimg.cc/CLyMngF5/Gemini-Generated-Image-91yhw591yhw591yh-1.png" alt="Matelas à Air Médical" class="h-full w-auto object-contain">
         </div>
@@ -202,8 +329,9 @@ f<!DOCTYPE html>
       </a>
     </div>
 
-    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center">
-      <a href="Concentrateur d'Oxygène.html" class="block">
+    <!-- Carte Concentrateur d'Oxygène -->
+    <div class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+      <a href="Concentrateur d'Oxygène.html" class="block h-full w-full">
         <div class="h-56 flex items-center justify-center bg-gray-100">
           <img src="https://fr.longfian.net/uploads/202112777/longfian-5l-medical-oxygen-concentrator45193270888.jpg" alt="Concentrateur d'Oxygène" class="h-full w-auto object-contain">
         </div>
@@ -215,6 +343,7 @@ f<!DOCTYPE html>
 
   </div>
 </section>
+
 
 
     </main>
@@ -369,7 +498,7 @@ f<!DOCTYPE html>
           <ul class="space-y-2 text-sm">
             <li>📍 Av. Ibn El Atir, Fès 30050</li>
             <li>✉️ <a href="mailto:contact@parakrouna.ma" class="hover:text-primary">contact@parakrouna.ma</a></li>
-            <li>📞 <a href="tel:+33123456789" class="hover:text-primary">06 65 29 80 82</a></li>
+            <li>📞 <a href="tel:+212665298082" class="hover:text-primary">06 65 29 80 82</a></li>
           </ul>
         </div>
       </div>
@@ -402,7 +531,6 @@ f<!DOCTYPE html>
   </script>
 </body>
 </html>
-
 
 
 
