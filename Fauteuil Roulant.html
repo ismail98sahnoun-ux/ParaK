@@ -97,58 +97,57 @@ f<!DOCTYPE html>
 
 
    <main class="flex-1">
- <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col lg:flex-row gap-12 items-center">
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col lg:flex-row gap-12 items-center">
 
   <!-- Galerie d’images -->
   <div class="flex-1">
 
     <!-- Image principale -->
     <div class="relative w-full h-80 md:h-[450px] rounded-xl overflow-hidden shadow-md bg-gray-100 flex items-center justify-center">
-      <img
-        id="mainImage"
-        src="https://i.postimg.cc/CLyMngF5/Gemini-Generated-Image-91yhw591yhw591yh-1.png"
-        alt="Matelas à Air Médical"
+      <img 
+        id="mainImage" 
+        src="https://fr.longfian.net/uploads/202112777/longfian-5l-medical-oxygen-concentrator45193270888.jpg"
+        alt="Concentrateur d'Oxygène" 
         class="max-h-full max-w-full object-contain transition-all duration-300"
       >
     </div>
 
-    <!-- Miniatures défilables -->
+    <!-- Miniatures défilables avec snap -->
     <div class="flex gap-4 mt-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
-      <img
-        src="https://i.postimg.cc/CLyMngF5/Gemini-Generated-Image-91yhw591yhw591yh-1.png"
-        alt="Matelas vue 1"
-        class="thumbnail w-24 h-20 flex-shrink-0 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition object-contain snap-start"
+      <img 
+        src="https://sc04.alicdn.com/kf/H36698cf1c9fc4fa7b139b32105ace608j.jpg"
+        alt="Concentrateur d'Oxygène vue 1"
+        class="thumbnail w-24 h-20 flex-shrink-0 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition object-contain bg-gray-100 p-1 snap-start"
         onclick="changeImage(this)"
       >
-      <img
-        src="https://i.postimg.cc/C1JV53Lm/Gemini-Generated-Image-7mbcw37mbcw37mbc-1-1.png"
-        alt="Matelas vue 2"
-        class="thumbnail w-24 h-20 flex-shrink-0 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition object-contain snap-start"
+      <img 
+        src="https://fr.longfian.net/uploads/202112777/longfian-5l-medical-oxygen-concentrator45193270888.jpg"
+        alt="Concentrateur d'Oxygène vue 2"
+        class="thumbnail w-24 h-20 flex-shrink-0 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition object-contain bg-gray-100 p-1 snap-start"
         onclick="changeImage(this)"
       >
-      <img
-        src="https://i.postimg.cc/QtfqHmL7/Gemini-Generated-Image-6ly7036ly7036ly7-2.png"
-        alt="Matelas vue 3"
-        class="thumbnail w-24 h-20 flex-shrink-0 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition object-contain snap-start"
+      <img 
+        src="https://fr.longfian.net/uploads/12777/small/medical-nebulizer-oxygen-concentrator-forea71a.jpg"
+        alt="Concentrateur d'Oxygène vue 3"
+        class="thumbnail w-24 h-20 flex-shrink-0 rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition object-contain bg-gray-100 p-1 snap-start"
         onclick="changeImage(this)"
       >
     </div>
-
   </div>
 
   <!-- Détails du produit -->
   <div class="flex-1">
-    <h2 class="text-4xl font-black mb-4">Matelas à Air Médical</h2>
+    <h2 class="text-4xl font-black mb-4">Concentrateur d'Oxygène</h2>
     <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-      Le <strong>Matelas à Air Médical</strong> prévient les escarres et offre un confort optimal pour les personnes alitées.
+      Ce <strong>Concentrateur d'Oxygène</strong> est idéal pour un usage médical à domicile, offrant fiabilité et facilité d’utilisation.
     </p>
 
     <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mb-8 space-y-2">
-      <li>Prévention efficace des escarres</li>
-      <li>Réglage de la pression selon le poids</li>
-      <li>Matelas léger et transportable</li>
-      <li>Matériaux durables et hygiéniques</li>
-      <li>Facile à gonfler et entretenir</li>
+      <li>Débit réglable selon les besoins</li>
+      <li>Fonctionnement silencieux</li>
+      <li>Portable et léger</li>
+      <li>Maintenance simple</li>
+      <li>Compatible pour usage quotidien</li>
     </ul>
 
     <div class="flex items-center gap-4">
@@ -160,7 +159,7 @@ f<!DOCTYPE html>
 
 </section>
 
-<!-- Script -->
+<!-- Script pour changer l'image principale -->
 <script>
   function changeImage(element) {
     const mainImage = document.getElementById('mainImage');
@@ -178,7 +177,7 @@ f<!DOCTYPE html>
 
 <!-- Styles supplémentaires -->
 <style>
-  /* Cache la scrollbar sur mobile pour un effet "swipe" propre */
+  /* Cache la scrollbar sur mobile pour un swipe propre */
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -187,6 +186,7 @@ f<!DOCTYPE html>
     display: none;
   }
 </style>
+
 
 
       <!-- POPUP CONTACT -->
@@ -432,6 +432,7 @@ f<!DOCTYPE html>
   </script>
 </body>
 </html>
+
 
 
 
