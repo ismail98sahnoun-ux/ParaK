@@ -137,24 +137,41 @@ f<!DOCTYPE html>
   </div>
 
   <!-- Détails du produit -->
-  <div class="flex-1">
-    <h2 class="text-4xl font-black mb-4">Fauteuil Roulant</h2>
-    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
-      Ce <strong>Fauteuil Roulant moderne</strong> est conçu pour offrir confort, sécurité et mobilité. Léger et robuste, il convient à un usage quotidien à domicile ou à l’extérieur.
+ <div class="flex-1"> 
+  <h2 class="text-4xl font-black mb-4">Fauteuil Roulant</h2>
+
+  <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+    Ce <strong>Fauteuil Roulant moderne</strong> offre confort, sécurité et mobilité. Léger et robuste, il est idéal pour un usage quotidien à domicile ou à l’extérieur.
+  </p>
+
+  <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mb-8 space-y-2">
+    <li>Structure en aluminium légère</li>
+    <li>Dossier et repose-pieds rabattables</li>
+    <li>Roues arrières démontables pour transport facile</li>
+    <li>Freins individuels pour plus de sécurité</li>
+    <li>Poids maximum utilisateur : 120 kg</li>
+  </ul>
+
+  <!-- Bandeau promo prix -->
+  <div class="bg-gray-100 dark:bg-yellow-800 p-4 rounded-lg mb-6 text-gray-800 dark:text-gray-200">
+    <p class="mt-2 text-xl font-bold">
+      Vente : 
+      <span class="line-through text-red-600 dark:text-red-400 mr-2">1 190 Dhs</span>
+      <span>930 Dhs</span>
     </p>
-    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 mb-8 space-y-2">
-      <li>Structure en aluminium légère</li>
-      <li>Dossier et repose-pieds rabattables</li>
-      <li>Roues arrières démontables pour transport facile</li>
-      <li>Freins individuels pour plus de sécurité</li>
-      <li>Poids maximum utilisateur : 120 kg</li>
-    </ul>
-    <div class="flex items-center gap-4">
-      <button onclick="openContactModal()" class="bg-primary text-gray-900 font-bold px-6 py-3 rounded-lg hover:opacity-90 transition">
-        Acheter
-      </button>
-    </div>
   </div>
+
+  <p class="text-gray-700 dark:text-gray-300 mb-6">
+    Contactez-nous pour obtenir un <strong>devis personnalisé</strong> ou plus d’informations sur la vente.
+  </p>
+
+  <div class="flex items-center gap-4">
+    <button onclick="openContactModal()" class="bg-primary text-gray-900 font-bold px-6 py-3 rounded-lg hover:opacity-90 transition">
+      Acheter
+    </button>
+  </div>
+</div>
+
 </section>
 
 <!-- Script pour changer l'image principale et swipe tactile -->
@@ -531,6 +548,7 @@ f<!DOCTYPE html>
   </script>
 </body>
 </html>
+
 
 
 
